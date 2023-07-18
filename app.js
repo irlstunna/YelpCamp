@@ -28,7 +28,8 @@ const reviewRoutes = require('./routes/reviews');
 // const dbUrl = process.env.DB_URL;
 // mongoose.connect(dbUrl, { mongodbatlas cloud
 
-const dbUrl ='mongodb://127.0.0.1/yelp-camp';
+const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1/yelp-camp';
+
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
